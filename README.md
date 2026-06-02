@@ -1,6 +1,6 @@
 # 🔐 Secure Coding Review - Password Manager
 
-## 📌 Overview
+## 📌 Overview 
 This project analyzes a Python-based password manager application to identify security vulnerabilities and improve secure coding practices.
 
 The goal is to understand real-world security risks and apply secure coding principles.
