@@ -1,66 +1,55 @@
-📄 Secure Coding Review – Task 3
+# 🔐 Secure Coding Review - Password Manager
 
-🔐 Project Title
+## 📌 Overview
+This project analyzes a Python-based password manager application to identify security vulnerabilities and improve secure coding practices.
 
-Secure Code Review of Password Manager Application
+The goal is to understand real-world security risks and apply secure coding principles.
 
-📌 Overview
-This project focuses on analyzing a Python-based password manager application to identify security vulnerabilities and improve secure coding practices. The review includes manual inspection and basic security analysis to understand common risks in software development.
+---
 
-🎯 Objective
-Identify security flaws in the application
-Understand insecure coding practices
-Apply secure coding recommendations
-Improve awareness of cybersecurity risks
-
-🛠 Tools Used
-Python 3
-Cryptography (Fernet encryption)
-Pydroid 3 / VS Code
-Manual Code Review
-
-💻 Project Description
+## 🧩 Project Description
 The application is a simple password manager that:
-Allows user login using a master password
-Stores passwords in encrypted format
-Saves data in a local JSON file
-Retrieves and decrypts stored passwords
+- Allows login using a master password  
+- Stores passwords using encryption (Fernet)  
+- Saves data in a local JSON file  
+- Retrieves and decrypts stored passwords  
 
-⚙️ Features
-Secure login system
-Password encryption using Fernet
-Add and view stored passwords
-Local data storage
+---
 
-🚨 Security Issues Identified
+## ⚠️ Security Issues Identified
 
-🔴 1. Hardcoded Password Risk
-Default password is visible in code which is insecure.
+### 1. Hardcoded Password Risk
+Default password is visible in code, making it insecure.
 
-🔴 2. Weak Authentication
-Only single password-based login is used.
+### 2. Weak Authentication
+Only a single master password is used for authentication.
 
-🟠 3. Key Storage Issue
-Encryption key stored locally in a file.
+### 3. Encryption Key Storage Issue
+Encryption key is stored locally in a file, which can be accessed.
 
-🟠 4. No Password Hashing
-Passwords are not hashed before usage.
+### 4. No Password Hashing
+Passwords are not hashed before storage or validation.
 
-🟡 5. Limited Input Validation
-User inputs are not fully validated.
+### 5. Limited Input Validation
+User inputs are not properly validated, increasing risk of misuse.
 
-🔧 Recommendations
+---
 
-Use environment variables for sensitive data
-Implement bcrypt password hashing
-Store encryption keys securely (vault/system keychain)
-Add account lockout after failed attempts
-Improve input validation
+## 🛠️ Recommendations
 
-📊 Outcome
-This project helped in understanding real-world security vulnerabilities in applications and improved knowledge of secure coding practices.
+- Use environment variables for sensitive data  
+- Implement bcrypt for password hashing  
+- Store encryption keys securely (OS keychain / vault)  
+- Add account lockout after multiple failed attempts  
+- Improve input validation and sanitization  
 
-👨‍💻 Author
-Dharshini R P
-Cyber Security Intern
-CodeAlpha Internship Program
+---
+
+## 📊 Outcome
+This project helped in understanding real-world application vulnerabilities and improved knowledge of secure coding practices such as authentication security, encryption handling, and input validation.
+
+---
+
+## 👩‍💻 Author
+Dharshini R P  
+Cyber Security Intern - CodeAlpha
